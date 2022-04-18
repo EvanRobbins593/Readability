@@ -18,7 +18,6 @@ public class Main {
                 .replace(":","")
                 .replace("'","")
                 .replace("-","").length();
-        System.out.println(nospace + " letter(s)");
         return nospace;
 
 
@@ -29,7 +28,6 @@ public class Main {
             System.out.println("0 words");
         }
         String[] words = string.split(" ");
-        System.out.println(words.length + " word(s)");
         return words.length;
 
     }
@@ -39,7 +37,6 @@ public class Main {
             System.out.println("0 sentences");
         }
         String[] sentences = string.split("[.!?]");
-        System.out.println(sentences.length + " sentence(s)");
         return sentences.length;
 
 
@@ -55,14 +52,10 @@ public class Main {
         double S = SentenceCounter(string);
 
         double AveL = (L/W) * 100;
-        System.out.println(AveL);
         double AveS = (S/W) * 100;
-        System.out.println(AveS);
 
         double index = (0.0588 * AveL) - (0.296 * AveS) - 15.8;
-        System.out.println(index);
         int Grade = (int)Math.round(index);
-        System.out.println(Grade);
         if (Grade < 1){
             System.out.println("Before Grade 1");
         } else if (Grade >= 16){
